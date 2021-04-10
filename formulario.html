@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+    <title>Formulário</title>
+</head>
+
+<div class="corpo">
+<body>
+
+    <div>
+        <h1 id="titulo">Cadastro Para Vacina</h1>
+        <p id="subtitulo">Complete suas Informações</p>
+        <br>
+    </div>
+
+    <form>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div class="campo">
+            <label><strong>Em qual área você mais se encaixa?</strong></label>
+            <label>
+                <input type="radio" name="area" value="homeoffice"> Trabalhando Home Office
+            </label>
+            <label>
+                <input type="radio" name="area" value="indotrabalhar"> Preciso ir até o trabalho
+            </label>
+            <label>
+                <input type="radio" name="area" value="essencial"> Meu trabalho é essencial
+            </label>
+            <label>
+                <input type="radio" name="area" value="essencial"> Sou aposentado(a)
+            </label>
+            <label>
+                <input type="radio" name="area" value="desempregado"> Não trabalho
+            </label>
+        </div>
+
+        <div class="campo">
+            <label for="senioridade"><strong>Faixa Etária</strong></label>
+            <select id="senioridade">
+                <option selected disabled value="">Selecione</option>
+                <option>Até 19</option>
+                <option>20 à 40</option>
+                <option>41 à 59</option>
+                <option>+60</option>
+            </select>
+        </div>
+
+        <fieldset class="grupo">
+            <div id="check">
+                <label><strong>Selecione o posto mais próximo:<br><br></strong></label>
+                <input type="checkbox" id="posto1" name="tecnologia1" value="Posto 1">
+                <label for="posto1">Posto 1</label>
+                <input type="checkbox" id="posto2" name="posto2" value="Posto 2">
+                <label for="posto2">Posto 2</label>
+                <input type="checkbox" id="posto3" name="posto3" value="Posto 3">
+                <label for="posto3">Posto 3</label>
+                <input type="checkbox" id="posto4" name="posto4" value="Posto 4">
+                <label for="posto4">Posto 4</label>
+                <input type="checkbox" id="posto5" name="posto5" value="Posto 5">
+                <label for="posto5">Posto 5</label>
+            </div>
+        </fieldset>
+
+        <button class="botao" onclick="adicionarDados()">Concluído</button>
+    </form>
+
+    <script>
+        function adicionarDados(){
+
+            var nome = document.getElementById("nome");
+
+            if (nome.value != ""){
+                alert(nome.value + ", obrigado por se inscrever! Feito por @anasozato");
+            }
+        }
+    </script>
+
+</body>
+</div>
+</html>
